@@ -18,7 +18,7 @@ npm run setup
 **Step 3** — Start your agent:
 
 ```bash
-docker compose up -d
+podman compose up -d
 ```
 
 \*\* To install a specific version, replace `@beta` with the exact version (e.g., `npx thepopebot@1.3.0-beta.1 init`). Run `npm info thepopebot` to see all available versions.
