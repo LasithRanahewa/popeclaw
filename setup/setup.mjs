@@ -781,19 +781,19 @@ async function main() {
     if (await confirm('Server is already running. Restart?')) {
       clack.log.info('Restarting server...');
       try {
-        execSync('docker compose down && docker compose up -d', { stdio: 'inherit' });
+        execSync('podman compose down && podman compose up -d', { stdio: 'inherit' });
         clack.log.success('Server restarted');
       } catch {
-        clack.log.warn('Failed to restart. Run manually: docker compose down && docker compose up -d');
+        clack.log.warn('Failed to restart. Run manually: podman compose down && podman compose up -d');
       }
     }
   } else {
     clack.log.info('Starting server...');
     try {
-      execSync('docker compose up -d', { stdio: 'inherit' });
+      execSync('podman compose up -d', { stdio: 'inherit' });
       clack.log.success('Server started');
     } catch {
-      clack.log.warn('Failed to start. Run manually: docker compose up -d');
+      clack.log.warn('Failed to start. Run manually: podman compose up -d');
     }
   }
 

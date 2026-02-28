@@ -127,7 +127,7 @@ Add a `#` to comment out the HTTP entrypoint, and remove the `#` from the two HT
 
 ```bash
 npm run build
-docker compose up -d
+podman compose up -d
 ```
 
 Ports 80 and 443 must be open on your server. Port 80 is required even with HTTPS — Let's Encrypt uses it for the ACME HTTP challenge to verify domain ownership.

@@ -73,7 +73,7 @@ For self-hosted deployment, build the project and start Docker:
 
 ```bash
 npm run build
-docker compose up -d
+podman compose up -d
 ```
 
 **Important:** The `.next/` build directory must exist before starting the container. If the container starts without a valid build, it will crash-loop until one is available.
@@ -95,7 +95,7 @@ If your public URL changes (e.g., after restarting ngrok or changing domains):
 
 1. Update `APP_URL` and `APP_HOSTNAME` in your `.env` file
 2. Update the `APP_URL` GitHub repository variable
-3. Restart Docker: `docker compose up -d`
+3. Restart containers: `podman compose up -d`
 4. If Telegram is configured, re-register the webhook:
 
 ```bash
